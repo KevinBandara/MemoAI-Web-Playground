@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - MemoAI Playground</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login.css">
+  <script>
+    window.addEventListener('DOMContentLoaded', async () => {
+      try {
+        const res = await fetch('/api/auth/status', { credentials: 'include' });
+        const data = await res.json();
+        if (data.authenticated) {
+          // ✅ User already logged in --> Redirect immediately to playground
+          window.location.href = "/playground.html";
+        }
+      } catch (error) {
+        console.error('Auth check failed:', error);
+      }
+
+      const params = new URLSearchParams(window.location.search);
+    if (params.get('logout') === '1') {
+      showToast("Logged out successfully!");
+    }
+    });
+  </script>
+  
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <h1>Welcome to MemoAI Web Playground</h1>
+      <p>Please login with Discord to continue</p>
+      <a href="/auth/discord" class="login-button">Login with Discord</a><br>
+      <a href="/auth/discord" class="home-button">Home</a>
+    </div>
+  </div>
+</body>
+</html>

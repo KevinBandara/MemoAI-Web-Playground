@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MemoAI Playground - Licoryx Technologies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.5/dist/purify.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="visionlab.css">
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<aside class="sidebar">
+    <div class="new-chat-btn">
+      <a href="visionlab.html" target="_blank"><button id="disChatBtn">VisionLab</button></a>
+      <a href="playground.html"><button id="newChatBtn">ChatAI</button></a>
+    </div>
+  </aside>
+
+<!-- Main Imagination Page -->
+<div class="main-content">
+  <div class="imagination-wrapper">
+    <div class="top-bar">
+      <select id="resolutionSelect">
+        <option>DALLE:E 3</option>
+        <option>16:9 (1280×720)</option>
+        <option>4:5 (800×1000)</option>
+      </select>
+      <select id="resolutionSelect">
+        <option>1:1 (1024×1024)</option>
+        <option>16:9 (1280×720)</option>
+        <option>4:5 (800×1000)</option>
+      </select>
+    </div>
+
+    <div class="tab-bar">
+      <button class="tab active">Generate</button>
+      <button class="tab">Gallery</button>
+    </div>
+
+    <div class="generate-area">
+      <textarea id="promptInput" placeholder="What do you want to draw?"></textarea>
+      <button id="generateBtn" class="generate-btn">Generate</button>
+    </div>
+
+    
+  </div>
+</div>
+
+</body>
+</html>

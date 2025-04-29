@@ -1,0 +1,110 @@
+:root {
+    --primary-bg: #0e0e17;
+    --secondary-bg: #16161f;
+    --accent-color: #4f7fff;
+    --text-color: #e2e6f7;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Poppins', sans-serif;
+  }
+  
+  body, html {
+    height: 100%;
+    background: var(--primary-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-container {
+    text-align: center;
+  }
+  
+  .login-box {
+    background: var(--secondary-bg);
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(79, 127, 255, 0.3);
+    animation: fadeIn 0.8s ease forwards;
+    max-width: 400px;
+    width: 90%;
+  }
+  
+  .login-box h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+  }
+  
+  .login-box p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #a0a8c3;
+  }
+  
+  .login-button {
+    display: inline-block;
+    padding: 14px 24px;
+    background: linear-gradient(135deg, #4f7fff, #3355ff);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background: linear-gradient(135deg, #668dff, #4f7fff);
+    transform: scale(1.05);
+  }
+
+  .home-button {
+    display: inline-block;
+    padding: 14px 24px;
+    background: linear-gradient(135deg, #4f7fff, #0c2081);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .home-button:hover {
+    background: linear-gradient(135deg, #4f7fff, #0c2081);
+    transform: scale(1.05);
+  }
+
+  
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .toast-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #4f7fff;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 9999;
+  }
+  
+  .toast-message.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
